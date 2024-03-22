@@ -1,6 +1,0 @@
-setup.py
-talkingclock/talkingclock.egg-info/PKG-INFO
-talkingclock/talkingclock.egg-info/SOURCES.txt
-talkingclock/talkingclock.egg-info/dependency_links.txt
-talkingclock/talkingclock.egg-info/requires.txt
-talkingclock/talkingclock.egg-info/top_level.txt

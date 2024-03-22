@@ -7,7 +7,7 @@ setup(
     include_package_data=True,
     package_dir={"":"src"}, 
     package_data={
-        'talkingclock': ["*.ics","mp3/*.mp3"],
+        'talkingclock': ["*.txt","*.ics","mp3/*.mp3"],
     },
     install_requires=[
         'playsound',

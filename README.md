@@ -3,28 +3,28 @@
 - lib playsound
 # Build Pypi and upload
 ### 1. Project structure
-    ```bash
-   py-talkingclock:
-       src:
-         talkingclock:
-             talkingclock.py
-             __init__.py
-             buddha.ics
-             mp3:
-                 1.mp3
-                 2.mp3
-                 ...
-       setup.py
-    ```
+```
+py-talkingclock:
+   src:
+     talkingclock:
+         talkingclock.py
+         __init__.py
+         buddha.ics
+         mp3:
+             1.mp3
+             2.mp3
+             ...
+   setup.py
+```
 
 ### 2. Build the package
-    ```bash
-    python3 setup.py sdist bdist_wheel
-    ```
+```bash
+python3 setup.py sdist bdist_wheel
+```
 ### 3. Upload the package
-    ```bash
-    twine upload dist/*
-    ```
+```bash
+twine upload dist/*
+```
 # Termux Android Scripts : Installation
 
 This guide will walk you through the steps to install Termux and required scripts on your Android device using either adb tools or manual APK download.

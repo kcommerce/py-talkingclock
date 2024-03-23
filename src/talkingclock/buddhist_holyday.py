@@ -71,11 +71,17 @@ def process_holyday(holyday):
     today = datetime.now().date()
     # Get the date of the next day
     next_day = today + timedelta(days=1)  
+    next_2day = today + timedelta(days=2)  
     desc=""
     sound_list=[]
 
-
-    if next_day in holyday:
+    if next_2day in holyday:
+        desc = holyday.get(next_2day)
+        sound_list+=["kmomkha.mp3"]
+        sound_list+=["iksongwan.mp3"]
+        sound_list+=["iswanpra.mp3"]
+        play_sound(desc,sound_list)
+    elif next_day in holyday:
         desc = holyday.get(next_day)
         sound_list+=["kmomkha.mp3"]
         sound_list+=["tomorrow.mp3"]
@@ -102,7 +108,7 @@ def play_sound(desc,sound_list):
             if len(t) > 0:
                 if t in sound_dict:
                     sound_file = sound_dict.get(t)+".mp3"
-                    print("file:"+sound_file)
+                    #print("file:"+sound_file)
                     sound_list+=[sound_file]
                 elif is_integer(t):
                     sound_file = str(t)+".mp3"

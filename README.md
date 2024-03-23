@@ -4,17 +4,17 @@
 # Build Pypi and upload
 ### 1. Project structure
     ```bash
-   py-talkingclock
-       src:
-         talkingclock:
-             talkingclock.py
-             __init__.py
-             buddha.ics
-             mp3:
-                 1.mp3
-                 2.mp3
-                 ...
-       setup.py
+       py-talkingclock:
+           src:
+             talkingclock:
+                 talkingclock.py
+                 __init__.py
+                 buddha.ics
+                 mp3:
+                     1.mp3
+                     2.mp3
+                     ...
+           setup.py
     ```
 
 ### 2. Build the package
@@ -42,10 +42,8 @@ You can check [Termux - the official web site here ](https://termux.dev/en/)
 
 - Import and use talkingclock
     ```bash
-Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> from talkingclock import talkingclock
->>> talkingclock.play_soundtime()
-
-    
+        Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>> from talkingclock import talkingclock
+        >>> talkingclock.play_soundtime()   
     ```

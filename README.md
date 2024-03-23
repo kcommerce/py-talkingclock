@@ -36,7 +36,7 @@ twine upload dist/*
     pip install talking clock
     ```
 
-### 2. Use : play sound time
+### 2. Use : play current sound time
 
 - Import and use talkingclock
     ```bash
@@ -44,4 +44,13 @@ twine upload dist/*
     Type "help", "copyright", "credits" or "license" for more information.
     >>> from talkingclock import talkingclock
     >>> talkingclock.play_soundtime()   
+    ```
+### 3. Use : play buddhist holy day sound
+
+- Import and use talkingclock
+    ```bash
+    Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> from talkingclock import buddhist_holyday
+    >>> buddhist_holyday.play_holysound()
     ```

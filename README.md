@@ -25,14 +25,12 @@ python3 setup.py sdist bdist_wheel
 ```bash
 twine upload dist/*
 ```
-# Termux Android Scripts : Installation
+# Binary Download
+- Download the binary: [download link](https://github.com/kcommerce/py-talkingclock/)
 
-This guide will walk you through the steps to install Termux and required scripts on your Android device using either adb tools or manual APK download.
-You can check [Termux - the official web site here ](https://termux.dev/en/)
 ## TalkingClock
-
 ### 1. Install TalkingClock
-- You can download copies of apks here: [download link](https://github.com/kcommerce/Termux-Android-Scripts/tree/main/apk)
+
   - Run the following command to install talkingclock
     ```bash
     pip install talking clock

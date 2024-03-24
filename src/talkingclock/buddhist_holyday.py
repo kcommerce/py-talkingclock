@@ -1,9 +1,32 @@
 
 # -*- coding: utf-8 -*-
-import sys,os,icalendar,re,csv
+import sys,os,icalendar,re,csv,subprocess
 from datetime import datetime,timedelta
 from playsound import playsound
+is_play_command = False
 
+def play_soundcommand(path):
+	global is_play_command  
+
+	if is_play_command:
+		# The "play" command is available
+		# So, we execute the "play" command
+		subprocess.run(["play", path])
+	else:
+		# If the "play" command is not available or encounters an error
+		# We use the playsound library to play the sound
+		playsound(path)
+def check_playcommand():
+	try:
+		# Check if the "play" command is available
+		subprocess.run(["play", "--version"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		# If the above line runs without errors, it means "play" command is available
+		# So, we execute the "play" command
+		return True
+	except subprocess.CalledProcessError:
+		# If the "play" command is not available or encounters an error
+		# We use the playsound library to play the sound
+		return False
 
 def is_integer(string):
     try:
@@ -116,9 +139,13 @@ def play_sound(desc,sound_list):
 
     for s in sound_list:
         mp3_path = os.path.join(os.path.join(os.path.dirname(__file__), 'mp3'),s)
-        playsound(mp3_path)
+        play_soundcommand(mp3_path)
 
 def play_holysound():
+
+    global is_play_command  
+    is_play_command = check_playcommand()
+ 
     holyday = get_holyday()
     process_holyday(holyday)
 

@@ -23,7 +23,7 @@ def check_playcommand():
 		# If the above line runs without errors, it means "play" command is available
 		# So, we execute the "play" command
 		return True
-	except subprocess.CalledProcessError:
+	except Exception as e:
 		# If the "play" command is not available or encounters an error
 		# We use the playsound library to play the sound
 		return False

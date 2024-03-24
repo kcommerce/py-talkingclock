@@ -33,7 +33,15 @@ twine upload dist/*
 
   - Run the following command to install talkingclock
     ```bash
-    pip install talking clock
+    pip install talkingclock
+    ```
+  - Note: If there's error about "OSError: could not get source code" try the following commands:
+    ```bash
+    pip install --upgrade wheel
+    pip install --upgrade setuptools
+    pip install PyObjC
+    pip install playsound
+    pip install talkingclock
     ```
 
 ### 2. Use : play current sound time
@@ -45,6 +53,11 @@ twine upload dist/*
     >>> from talkingclock import talkingclock
     >>> talkingclock.play_soundtime()   
     ```
+- Use in cronjob:
+    ```bash
+    0 8-23 * * * python3 -c "from talkingclock import talkingclock; talkingclock.play_soundtime()" >> ~/logs/time.log 1>&2
+
+    ```
 ### 3. Use : play buddhist holy day sound
 
 - Import and use talkingclock
@@ -53,4 +66,8 @@ twine upload dist/*
     Type "help", "copyright", "credits" or "license" for more information.
     >>> from talkingclock import buddhist_holyday
     >>> buddhist_holyday.play_holysound()
+    ```
+- Use in cronjob:
+    ```bash
+0 8,12,17 * * * python3 -c "from talkingclock import buddhist_holyday; buddhist_holyday.play_holysound()" >> ~/logs/holyday.log  1>&2
     ```

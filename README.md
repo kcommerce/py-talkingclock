@@ -1,6 +1,7 @@
 # Prerequisites
 - Python 3.5+
 - lib playsound
+- lib icalendar
 # Build Pypi and upload
 ### 1. Project structure
 ```

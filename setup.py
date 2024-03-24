@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='talkingclock',
-    version='0.8',
+    version='1.0',
     author='Sakchart Ngamluan',
     author_email='kcommerce@gmail.com',
     description='A Python utility library for talking clock',

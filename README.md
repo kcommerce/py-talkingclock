@@ -69,5 +69,5 @@ twine upload dist/*
     ```
 - Use in cronjob:
     ```bash
-0 8,12,17 * * * python3 -c "from talkingclock import buddhist_holyday; buddhist_holyday.play_holysound()" >> ~/logs/holyday.log  1>&2
+    0 8,12,17 * * * python3 -c "from talkingclock import buddhist_holyday; buddhist_holyday.play_holysound()" >> ~/logs/holyday.log  1>&2
     ```

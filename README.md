@@ -33,15 +33,15 @@ twine upload dist/*
 
   - Run the following command to install talkingclock
     ```bash
-    pip install talkingclock
+    pip3 install talkingclock
     ```
   - Note: If there's error about "OSError: could not get source code" try the following commands:
     ```bash
-    pip install --upgrade wheel
-    pip install --upgrade setuptools
-    pip install PyObjC
-    pip install playsound
-    pip install talkingclock
+    pip3 install --upgrade wheel
+    pip3 install --upgrade setuptools
+    pip3 install PyObjC
+    pip3 install playsound
+    pip3 install talkingclock
     ```
 
 ### 2. Use : play current sound time

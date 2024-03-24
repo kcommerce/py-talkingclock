@@ -17,7 +17,7 @@ setup(
         'talkingclock': ["*.txt","*.ics","mp3/*.mp3"],
     },
     install_requires=[
-        'playsound',
+        'playsound','icalendar'
     ],
     classifiers=[
         'Programming Language :: Python :: 3',

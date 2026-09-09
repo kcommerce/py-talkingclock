@@ -2,7 +2,9 @@
 import sys,os,subprocess
 from datetime import datetime
 from playsound import playsound
-
+from ios_sound import play_audio
+from detect_env import is_ios
+from detect_env import is_jailbroken
 is_play_command = False
 
 def play_sound(path):
@@ -15,7 +17,11 @@ def play_sound(path):
 	else:
 		# If the "play" command is not available or encounters an error
 		# We use the playsound library to play the sound
-		playsound(path)
+                # special case for ios jailbreak run inside terminal
+                if (is_ios() and  is_jailbroken()):
+                    play_audio(path,20)
+                    return
+                playsound(path)
 def check_playcommand():
 	try:
 		# Check if the "play" command is available

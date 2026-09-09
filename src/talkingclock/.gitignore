@@ -1,0 +1,27 @@
+# General macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon and thumbnail caches
+Icon
+Icon?
+._*
+
+# Thumbnails and file metadata
+.Spotlight-V100
+.Trashes
+
+# Directory metadata
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# iCloud and network stores
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
